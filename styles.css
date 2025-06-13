@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -310,6 +308,102 @@ section {
 /* About Section */
 .about {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    padding-top: 80px; /* Extra space for flags */
+}
+
+/* Prayer Flag String for About Section */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -5%;
+    right: -5%;
+    height: 2px;
+    background: rgba(101, 67, 33, 0.8);
+    z-index: 1;
+    transform: rotate(-1deg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Prayer Flags for About Section */
+.about::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-image: 
+        /* Blue Flag */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%230066CC" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23ffffff" stroke-width="1" opacity="0.6"/></svg>'),
+        /* White Flag */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%23ffffff" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23cccccc" stroke-width="1"/></svg>'),
+        /* Red Flag */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%23CC0000" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23ffffff" stroke-width="1" opacity="0.6"/></svg>'),
+        /* Green Flag */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%2300AA00" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23ffffff" stroke-width="1" opacity="0.6"/></svg>'),
+        /* Yellow Flag */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%23FFCC00" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23666666" stroke-width="1" opacity="0.6"/></svg>'),
+        /* Blue Flag 2 */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%230066CC" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23ffffff" stroke-width="1" opacity="0.6"/></svg>'),
+        /* White Flag 2 */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%23ffffff" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23cccccc" stroke-width="1"/></svg>'),
+        /* Red Flag 2 */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%23CC0000" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23ffffff" stroke-width="1" opacity="0.6"/></svg>'),
+        /* Green Flag 2 */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%2300AA00" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23ffffff" stroke-width="1" opacity="0.6"/></svg>'),
+        /* Yellow Flag 2 */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><rect width="60" height="40" fill="%23FFCC00" opacity="0.9"/><rect x="5" y="5" width="50" height="30" fill="none" stroke="%23666666" stroke-width="1" opacity="0.6"/></svg>');
+    
+    background-position: 
+        5% 15px,   /* Blue */
+        15% 17px,  /* White */
+        25% 19px,  /* Red */
+        35% 21px,  /* Green */
+        45% 23px,  /* Yellow */
+        55% 25px,  /* Blue 2 */
+        65% 27px,  /* White 2 */
+        75% 29px,  /* Red 2 */
+        85% 31px,  /* Green 2 */
+        95% 33px;  /* Yellow 2 */
+    
+    background-size: 50px 35px;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 1;
+    animation: aboutPrayerWave 5s ease-in-out infinite;
+}
+
+/* Waving Animation for About Section */
+@keyframes aboutPrayerWave {
+    0%, 100% {
+        transform: translateY(0px) rotate(-1deg);
+        filter: brightness(1);
+    }
+    25% {
+        transform: translateY(-2px) rotate(-0.5deg);
+        filter: brightness(1.05);
+    }
+    50% {
+        transform: translateY(-1px) rotate(-1.5deg);
+        filter: brightness(1);
+    }
+    75% {
+        transform: translateY(-3px) rotate(-0deg);
+        filter: brightness(1.03);
+    }
+}
+
+
+.about > * {
+    position: relative;
+    z-index: 2;
+}
+
+.about .container,
+.about .content {
+    margin-top: 20px;
 }
 
 .about-content {
