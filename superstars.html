@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mane Eco Tourism Resort - Our Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a5f4a 30%, #2d7a5f 60%, #4a9b7e 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Realistic Mountain Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(to bottom, rgba(15, 76, 58, 0.8) 0%, rgba(26, 95, 74, 0.7) 50%, rgba(45, 122, 95, 0.6) 100%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><path fill="%23234a3d" d="M0,800 L0,300 C150,350 300,250 450,300 C600,350 750,500 900,450 C1050,400 1200,150 1200,150 L1200,800 Z"></path><path fill="%23345a4d" opacity="0.8" d="M0,800 L0,400 C150,450 300,350 450,400 C600,450 750,600 900,550 C1050,500 1200,250 1200,250 L1200,800 Z"></path><path fill="%23456a5d" opacity="0.6" d="M0,800 L0,500 C150,550 300,450 450,500 C600,550 750,700 900,650 C1050,600 1200,350 1200,350 L1200,800 Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            z-index: -2;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+        }
+
+        /* Floating Leaves Animation */
+        .leaf {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #4CAF50, #8BC34A);
+            border-radius: 0 100% 0 100%;
+            animation: float 15s infinite linear;
+            opacity: 0.7;
+            z-index: 1;
+        }
+
+        .leaf::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 15px;
+            background: #2E7D32;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .leaf:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
+        .leaf:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 14s; }
+        .leaf:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 16s; }
+        .leaf:nth-child(4) { left: 40%; animation-delay: 6s; animation-duration: 13s; }
+        .leaf:nth-child(5) { left: 60%; animation-delay: 8s; animation-duration: 15s; }
+        .leaf:nth-child(6) { left: 70%; animation-delay: 10s; animation-duration: 11s; }
+        .leaf:nth-child(7) { left: 80%; animation-delay: 12s; animation-duration: 17s; }
+        .leaf:nth-child(8) { left: 90%; animation-delay: 14s; animation-duration: 14s; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Teams Section */
+        .teams {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Team Category */
+        .team-category {
+            margin-bottom: 80px;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .category-title::before {
+            content: '🏔️';
+            position: absolute;
+            left: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+        }
+
+        .category-title::after {
+            content: '🏔️';
+            position: absolute;
+            right: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+        }
+
+        /* Special Managing Director Card */
+        .managing-director {
+            margin-bottom: 60px;
+        }
+
+        .md-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 165, 0, 0.1) 100%);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 25px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.3),
+                0 0 30px rgba(255, 215, 0, 0.2),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .md-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .md-card:hover::before {
+            animation: shimmer 1.5s ease-in-out infinite;
+            opacity: 1;
+        }
+
+        .md-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 
+                0 30px 60px rgba(0,0,0,0.4),
+                0 0 50px rgba(255, 215, 0, 0.4),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            justify-items: center;
+        }
+
+        /* Team Member Card */
+        .team-member {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            max-width: 380px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 15px 35px rgba(0,0,0,0.2),
+                0 5px 15px rgba(0,0,0,0.1),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .team-member:hover::before {
+            left: 100%;
+        }
+
+        .team-member:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 
+                0 25px 50px rgba(0,0,0,0.3),
+                0 10px 25px rgba(0,0,0,0.15),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+            border-color: rgba(255, 215, 0, 0.4);
+        }
+
+        
+.member-photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 
+         0 10px 30px rgba(76, 175, 80, 0.3),
+        inset 0 2px 4px rgba(255,255,255,0.2);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.member-photo::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+/* Add this for the image */
+.member-photo img {
+     object-fit: none;
+    width: 100%;
+   
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    z-index: 1;
+     transform: translateY(10px);
+}
+        .team-member:hover .member-photo::before {
+            animation: photoShimmer 2s ease-in-out infinite;
+            opacity: 1;
+        }
+
+        .team-member:hover .member-photo {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 
+                0 15px 40px rgba(76, 175, 80, 0.4),
+                inset 0 2px 4px rgba(255,255,255,0.3);
+        }
+
+        @keyframes photoShimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .member-photo i {
+            font-size: 3rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover .member-photo i {
+            transform: scale(1.1);
+        }
+
+        /* Member Details */
+        .member-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 8px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .member-role {
+            font-size: 1rem;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .member-description {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Skills */
+        .member-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.8), rgba(46, 125, 50, 0.8));
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(255, 165, 0, 0.9));
+        }
+
+        /* Social Links */
+        .member-social {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .social-link:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+            border-color: #FFD700;
+        }
+
+        .social-link i {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover i {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .teams {
+                padding: 60px 0;
+            }
+
+            .section-header {
+                margin-bottom: 50px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .team-member {
+                max-width: 100%;
+            }
+
+            .category-title::before,
+            .category-title::after {
+                display: none;
+            }
+
+            .md-card {
+                padding: 30px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .category-title {
+                font-size: 2rem;
+            }
+
+            .team-member {
+                padding: 25px 20px;
+            }
+
+            .member-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .member-photo i {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Special Animation for Page Load */
+        .team-member {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideInUp 0.8s ease forwards;
+        }
+
+        .team-member:nth-child(1) { animation-delay: 0.1s; }
+        .team-member:nth-child(2) { animation-delay: 0.2s; }
+        .team-member:nth-child(3) { animation-delay: 0.3s; }
+        .team-member:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .md-card {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 0.8s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        /* Performance optimizations */
+        .page-hidden .leaf {
+            animation-play-state: paused;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Footer */
+.footer {
+    background: #2c5530;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #8BC34A;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    opacity: 0.9;
+}
+
+.footer-section ul li a:hover {
+    color: #8BC34A;
+}
+
+.footer-section ul li i {
+    margin-right: 0.5rem;
+    color: #8BC34A;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #4CAF50;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-left {
+    animation: slideInLeft 1s ease-out;
+}
+
+.animate-slide-right {
+    animation: slideInRight 1s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .nav-menu .nav-link {
+        color: #333;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .accommodations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experiences-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sustainability-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sustainability-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .sustainability-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+/* Scroll Animation Utilities */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #45a049, #7cb342);
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+    </style>
+</head>
+<body>
+    <!-- Floating Leaves -->
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+
+    <!-- Team Section -->
+    <section id="teams" class="teams">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Superstars</h2>
+                <p class="section-subtitle">Meet the passionate souls who bring life to Mane Eco Tourism Resort, guardians of nature and culture in the heart of Nepal</p>
+            </div>
+
+            <!-- Managing Director Section -->
+            <div class="managing-director">
+                <div class="md-card">
+                    
+                    <div class="member-photo">
+                       
+                        <img src="/images/5.jpg" alt="Pramod Thapa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </div>
+                    <h4 class="member-name">Pramod Thapa</h4>
+                    <p class="member-role">Managing Director & Visionary Leader</p>
+                    <p class="member-description">Visionary architect of Nepal's sustainable tourism revolution. With over 25 years of expertise in hospitality and environmental conservation, he leads Mane Eco Resort towards a future where luxury meets responsibility, creating transformative experiences while preserving the pristine beauty of the Himalayas.</p>
+                    <div class="member-skills">
+                        <span class="skill-tag">Strategic Leadership</span>
+                        <span class="skill-tag">Sustainable Development</span>
+                        <span class="skill-tag">Hospitality Excellence</span>
+                        <span class="skill-tag">Environmental Stewardship</span>
+                    </div>
+                    <div class="member-social">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-crown"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Co-Founders Section -->
+            <div class="team-category">
+                <h3 class="category-title">Co-Founders & Visionaries</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="/images/4.jpg" alt="Pramod Thapa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        </div>
+                        <h4 class="member-name">Saroj Thapa</h4>
+                        <p class="member-role">Co-Founder & CEO</p>
+                        <p class="member-description">Visionary leader with 20+ years in sustainable tourism. Pioneer in eco-friendly hospitality, passionate about preserving Nepal's pristine beauty while creating meaningful opportunities for mountain communities.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Sustainable Tourism</span>
+                            <span class="skill-tag">Leadership</span>
+                            <span class="skill-tag">Conservation</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="/images/2.jpeg" alt="Pramod Thapa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        </div>
+                        <h4 class="member-name">Pradeep Thapa</h4>
+                        <p class="member-role">Co-Founder & Cultural Director</p>
+                        <p class="member-description">Cultural preservation expert and hospitality maven. Ensures every guest experiences authentic Nepali warmth while maintaining our deep-rooted commitment to traditional values and sustainable practices.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Cultural Heritage</span>
+                            <span class="skill-tag">Guest Relations</span>
+                            <span class="skill-tag">Community Building</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                           <img src="/images/1.jpg" alt="Pramod Thapa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        </div>
+                        <h4 class="member-name">Sushil Thapa</h4>
+                        <p class="member-role">Co-Founder & Sustainability Officer</p>
+                        <p class="member-description">Environmental scientist and sustainability champion. Leads our zero-waste initiatives and renewable energy programs, ensuring every aspect of our resort harmonizes with Mother Nature.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Environmental Science</span>
+                            <span class="skill-tag">Renewable Energy</span>
+                            <span class="skill-tag">Zero Waste</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-leaf"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="/images/3.jpg" alt="Pramod Thapa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                        </div>
+                        <h4 class="member-name">Kiran Thapa</h4>
+                        <p class="member-role">Co-Founder & Experience Curator</p>
+                        <p class="member-description">Adventure enthusiast and experience designer. Creates unforgettable journeys that connect guests with Nepal's natural wonders while fostering deep respect for mountain ecosystems and local traditions.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Adventure Tourism</span>
+                            <span class="skill-tag">Experience Design</span>
+                            <span class="skill-tag">Nature Guiding</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-mountain"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crew Members Section -->
+            <div class="team-category">
+                <h3 class="category-title">Nature's Guardians</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4 class="member-name">Krishna Bahadur</h4>
+                        <p class="member-role">Master Organic Farmer</p>
+                        <p class="member-description">Guardian of our organic paradise with ancient wisdom passed through generations. Leads our farm-to-table revolution, teaching sustainable agriculture while nurturing the earth that sustains us all.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Organic Farming</span>
+                            <span class="skill-tag">Permaculture</span>
+                            <span class="skill-tag">Seed Saving</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fas fa-seedling"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4 class="member-name">Devi Kumari</h4>
+                        <p class="member-role">Culinary Artist & Head Chef</p>
+                        <p class="member-description">Culinary magician who transforms our organic harvest into soul-warming Nepali delicacies. Every dish tells a story of tradition, sustainability, and the pure flavors of mountain life.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Traditional Cuisine</span>
+                            <span class="skill-tag">Organic Cooking</span>
+                            <span class="skill-tag">Herbal Teas</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-utensils"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <h4 class="member-name">Pemba Sherpa</h4>
+                        <p class="member-role">Mountain Soul & Adventure Guide</p>
+                        <p class="member-description">Born in the shadows of towering peaks, Pemba carries the spirit of the mountains in his heart. Expert guide who reveals hidden trails and sacred valleys with reverence for the land and its people.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">High Altitude Trekking</span>
+                            <span class="skill-tag">Wildlife Tracking</span>
+                            <span class="skill-tag">Cultural Interpretation</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-mountain"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h4 class="member-name">Maya Gurung</h4>
+                        <p class="member-role">Wellness Director & Ayurvedic Healer</p>
+                        <p class="member-description">Keeper of ancient healing traditions, Maya blends Himalayan herbs with time-honored techniques to restore balance and vitality. Her wellness programs connect guests with nature's restorative powers.</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Ayurveda</span>
+                            <span class="skill-tag">Herbal Medicine</span>
+                            <span class="skill-tag">Yoga Therapy</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#" class="social-link"><i class="fas fa-spa"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mane Eco Resort</h3>
+                    <p>Sustainable tourism in the heart of Nepal. Experience nature, culture, and community in perfect harmony.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#accommodations">Accommodations</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#sustainability">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Experiences</h4>
+                    <ul>
+                        <li><a href="#">Organic Farming</a></li>
+                        <li><a href="#">Nature Trails</a></li>
+                        <li><a href="#">Cultural Programs</a></li>
+                        <li><a href="#">Meditation & Yoga</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Nepal</li>
+                        <li><i class="fas fa-phone"></i> +977 XXX XXX XXX</li>
+                        <li><i class="fas fa-envelope"></i> info@maneecoresort.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mane Eco Tourism Resort. All rights reserved. | Thapa Group of Hospitality</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Debounced scroll handler for performance
+        const debouncedScrollHandler = debounce(() => {
+            // You can add scroll-based animations or effects here
+            // For example, parallax effects or scroll-triggered animations
+        }, 16); // ~60fps
+
+        window.addEventListener('scroll', debouncedScrollHandler);
+
+        // Page visibility API for performance optimization
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                // Pause animations when page is not visible
+                document.body.classList.add('page-hidden');
+            } else {
+                // Resume animations when page becomes visible
+                document.body.classList.remove('page-hidden');
+            }
+        });
+
+        // Debounce function to limit how often a function is called
+        function debounce(func, wait) {
+            let timeout;
+            return function() {
+                const context = this, args = arguments;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    func.apply(context, args);
+                }, wait);
+            };
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a subtle parallax effect to the mountain background
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.pageYOffset;
+            const background = document.querySelector('body::before');
+            if (background) {
+                background.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
